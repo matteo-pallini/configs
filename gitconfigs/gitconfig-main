@@ -1,0 +1,38 @@
+[includeIf "gitdir:~/personal/"]
+	path = ~/.gitconfig-personal
+
+[includeIf "gitdir:~/Projects/"]
+	path = ~/.gitconfig-work
+[core]
+	editor = vim
+[push]
+	default = current
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[alias]
+	cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d"
+	ch = checkout
+	co = commit
+	st = status
+	br = branch
+	unstage = reset HEAD --
+	last3 = log -3 HEAD
+	re = rebase
+	ctags = !.git/hooks/ctags.sh
+	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
+	logdog = log --decorate --oneline --graph
+[init]
+	templatedir = ~/.git-template
+[fetch]
+        prune = true
+[pull]
+        rebase = true
+[diff]
+        colorMoved = zebra
+[rebase]
+        autosquash = true
+
