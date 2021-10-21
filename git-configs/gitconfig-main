@@ -35,4 +35,5 @@
         colorMoved = zebra
 [rebase]
         autosquash = true
-
+[pager]
+	branch = false
