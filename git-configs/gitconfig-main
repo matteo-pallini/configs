@@ -25,6 +25,7 @@
 	ctags = !.git/hooks/ctags.sh
 	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
 	logdog = log --decorate --oneline --graph
+	fast-amend = !git add -A && git commit --amend --no-edit
 [init]
 	templatedir = ~/.git-template
 [fetch]
