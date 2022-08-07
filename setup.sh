@@ -6,8 +6,8 @@ echo "select materia as a theme from the tweak page"
 sudo apt install zsh
 chsh -s $(which zsh)
 
-echo "HISTSIZE=10000000" >> ~/.zshr
-echo "SAVEHIST=10000000" >> ~/.zshr
+echo "HISTSIZE=10000000" >> ~/.zshrc
+echo "SAVEHIST=10000000" >> ~/.zshrc
 echo "setopt SHARE_HISTORY # share command history data" >> ~/.zshrc
 echo "autoload -Uz zcalc" >> ~/.zshrc
 
