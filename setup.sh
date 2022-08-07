@@ -27,7 +27,12 @@ git clone https://github.com/agkozak/zsh-z $ZSH_CUSTOM/plugins/zsh-z
 sudo apt-get install peco
 git clone https://github.com/jimeh/zsh-peco-history.git $ZSH_CUSTOM/plugins/zsh-peco-history
 
-echo "manually replace plugins in ~/.zshrc with plugins=(zsh-z colored-man-pages git python django mvn aws docker vscode zsh-peco-history)"
+git clone https://github.com/agkozak/zsh-z $ZSH_CUSTOM/plugins/zsh-z
+sudo apt-get install peco
+git clone https://github.com/jimeh/zsh-peco-history.git $ZSH_CUSTOM/plugins/zsh-peco-history
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+echo "change plugins to plugins=(colored-man-pages git python django mvn aws docker vscode zsh-z zsh-peco-history zsh-autosuggestions zsh-syntax-highlighting)"
 
 # set up emacs as default text editor
 sudo add-apt-repository ppa:kelleyk/emacs
