@@ -46,13 +46,23 @@ EOL
 
 # set up python
 mkdir -p ~/.virtualenvs
-pip install virtualenvwrapper
+
+# Automatic venv activation
+sudo apt-get install direnv
+
+curl https://pyenv.run | bash
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
+echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
+echo 'eval "$(pyenv init -)"' >> ~/.zshrc
+
+source $ZSH/oh-my-zsh.sh
+
 
 cat >~/.zshrc <<EOL
 alias python=python3
 alias ipy="python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
 export WORKON_HOME=~/.virtualenvs/
-source ~/.local/bin/virtualenvwrapper.sh
+
 EOL
 
 cat >~/.zshrc <<EOL
