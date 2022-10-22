@@ -96,9 +96,7 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+
 HISTSIZE=10000000
 SAVEHIST=10000000
 setopt SHARE_HISTORY # share command history data
@@ -111,6 +109,7 @@ alias e='emacsclient --create-frame'
 
 # needed for direnv (emacs)
 # Automatic venv activation
+export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(direnv hook zsh)"
 setopt PROMPT_SUBST
@@ -120,3 +119,6 @@ show_virtual_env() {
   fi
 }
 PS1='$(show_virtual_env)'$PS1
+
+# needed for automatically activating virtual env
+eval "$(pyenv virtualenv-init -)"
