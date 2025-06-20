@@ -15,6 +15,7 @@
 
 [alias]
 	cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d"
+	nuke-all-br = !git branch | grep -v "develop" | grep -v "master" | grep -v "main" | xargs git branch -D
 	ch = checkout
 	co = commit
 	st = status
@@ -26,6 +27,8 @@
 	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
 	logdog = log --decorate --oneline --graph
 	fast-amend = !git add -A && git commit --amend --no-edit
+	tagcommit = rev-list -n 1
+	acfp = !git add -A && git commit --amend --no-edit --no-verify && git push -f
 [init]
 	templatedir = ~/.git-template
 [fetch]
