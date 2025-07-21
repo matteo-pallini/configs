@@ -1,0 +1,40 @@
+{
+    "files.autoSave": "afterDelay",
+    "security.workspace.trust.untrustedFiles": "open",
+    "hediet.vscode-drawio.resizeImages": null,
+    "explorer.confirmDragAndDrop": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "workbench.editor.enablePreview": false,
+    "docker.environment": {
+        "VSCODE_SERVER_ROOT": "/tmp/.vscode-server"
+    },
+    "vs-kubernetes": {
+        "environment": {
+            "VSCODE_SERVER_ROOT": "/tmp/.vscode-server"
+        },
+        "vs-kubernetes.namespace": "",
+        "vs-kubernetes.kubectl-path": "",
+        "vs-kubernetes.helm-path": "",
+        "vs-kubernetes.minikube-path": "",
+        "vs-kubernetes.kubectlVersioning": "user-provided",
+        "vs-kubernetes.outputFormat": "yaml",
+        "vs-kubernetes.kubeconfig": "",
+        "vs-kubernetes.knownKubeconfigs": [],
+        "vs-kubernetes.autoCleanupOnDebugTerminate": false,
+        "vs-kubernetes.nodejs-autodetect-remote-root": true,
+        "vs-kubernetes.nodejs-remote-root": "",
+        "vs-kubernetes.nodejs-debug-port": 9229,
+        "vs-kubernetes.dotnet-vsdbg-path": "~/vsdbg/vsdbg",
+        "vs-kubernetes.local-tunnel-debug-provider": "",
+        "checkForMinikubeUpgrade": true,
+        "imageBuildTool": "Docker",
+        "vscode-kubernetes.minikube-path-mac": "/Users/matteopallini/.vs-kubernetes/tools/minikube/darwin-arm64/minikube"
+    },
+    "python.defaultInterpreterPath": "/Users/matteopallini/.pyenv/shims/python",
+    "workbench.editorAssociations": {
+        "*.copilotmd": "vscode.markdown.preview.editor",
+        "{git,gitlens,git-graph}:/**/*.{md,csv,svg}": "default"
+    },
+    "workbench.colorTheme": "One Dark Modern",
+    "github.copilot.nextEditSuggestions.enabled": true
+}
