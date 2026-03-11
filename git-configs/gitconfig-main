@@ -41,3 +41,6 @@
         autosquash = true
 [pager]
 	branch = false
+
+[url "git@github.com:"]
+	insteadOf = https://github.com/
